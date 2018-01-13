@@ -1,6 +1,7 @@
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
+  const friendly = client.config.permLevels.find(l => l.level === level).name;
   const msg = await message.channel.send("Ping?");
-  msg.edit(`Pong! Latency is ${msg.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
+  msg.edit(`Pong! Latency is ${msg.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms.\n Also, your permission level is: ${level} - ${friendly}`);
 };
 
 exports.conf = {
@@ -8,11 +9,4 @@ exports.conf = {
   guildOnly: false,
   aliases: [],
   permLevel: "User"
-};
-
-exports.help = {
-  name: "ping",
-  category: "Miscelaneous",
-  description: "It... like... pings. Then Pongs. And it\"s not Ping Pong.",
-  usage: "ping"
 };

@@ -20,10 +20,3 @@ exports.conf = {
   aliases: [],
   permLevel: "User"
 };
-
-exports.help = {
-  name: "stats",
-  category: "Miscelaneous",
-  description: "Gives some useful bot statistics",
-  usage: "stats"
-};
