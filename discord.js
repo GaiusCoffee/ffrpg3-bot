@@ -55,11 +55,11 @@ module.exports = class discord {
 			},
 			{ level: 8,
 			name: "Bot Support",
-			check: (message) => config.support.includes(message.author.id)
+			check: (message) => support.includes(message.author.id)
 			},
 			{ level: 9,
 			name: "Bot Admin",
-			check: (message) => config.admins.includes(message.author.id)
+			check: (message) => admins.includes(message.author.id)
 			},
 			{ level: 10,
 			name: "Bot Owner",

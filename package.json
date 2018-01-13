@@ -1,10 +1,10 @@
 {
-  "name": "ffrpg-bot",
+  "name": "ffrpg3-bot",
   "version": "1.0.0",
   "description": "My app description",
   "author": "gaius.coffee@gmail.com",
   "scripts": {
-    "start": "node server.js"
+    "start": "supervisor -i . server.js"
   },
   "repository": {
     "type": "git",
