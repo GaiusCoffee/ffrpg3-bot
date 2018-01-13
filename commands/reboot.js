@@ -12,3 +12,8 @@ exports.conf = {
   aliases: [],
   permLevel: "Bot Admin"
 };
+
+exports.help = {
+  name: "stats",
+  category: "System"
+}

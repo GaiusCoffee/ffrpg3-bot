@@ -10,3 +10,8 @@ exports.conf = {
   aliases: [],
   permLevel: "User"
 };
+
+exports.help = {
+  name: "stats",
+  category: "System"
+}
