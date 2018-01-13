@@ -4,7 +4,7 @@
   "description": "My app description",
   "author": "gaius.coffee@gmail.com",
   "scripts": {
-    "start": "supervisor -i . server.js"
+    "start": "supervisor -w .\\commands server.js"
   },
   "repository": {
     "type": "git",
