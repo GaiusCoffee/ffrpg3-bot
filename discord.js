@@ -105,6 +105,7 @@ module.exports = class discord {
 		client.commands = new Enmap();
 		client.aliases = new Enmap();
 		client.settings = new Enmap({provider: new EnmapLevel({name: "settings"})});
+		client.db = {};
 		const init = async () => {
 			const cmdFiles = await readdir("./commands/");
 			client.logger.log(`Loading a total of ${cmdFiles.length} commands.`);
