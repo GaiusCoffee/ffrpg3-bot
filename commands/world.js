@@ -11,7 +11,7 @@ exports.conf = {
 	enabled: true,
 	guildOnly: false,
 	aliases: ["w"],
-	permLevel: "User"
+	permLevel: "Worldbuilder"
 };
 
 exports.help = {
