@@ -12,6 +12,6 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "stats",
+  name: "ping",
   category: "System"
 }

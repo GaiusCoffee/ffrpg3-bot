@@ -14,6 +14,6 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "stats",
+  name: "reboot",
   category: "System"
 }

@@ -11,6 +11,6 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "stats",
+  name: "mylevel",
   category: "System"
 }

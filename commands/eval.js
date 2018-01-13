@@ -25,6 +25,6 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "stats",
+  name: "eval",
   category: "System"
 }
