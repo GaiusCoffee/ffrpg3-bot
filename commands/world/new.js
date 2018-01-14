@@ -27,14 +27,15 @@ exports.run = async (client, message, args, level) => {
         // Process
         let worldname = args[1];
         await client.db["worlds_" + message.guild.id].set(worldname, message.author.username);
+        const msg = await message.channel.send("Please wait; Building world, kupo..");
         // Respond
         const embed = new Discord.RichEmbed()
             .setAuthor("Cidolfus \"The Super Moogle\" Artemicion", "http://ffrpg3bot.gaius.online/images/cid.small.gif")
             .setThumbnail("http://ffrpg3bot.gaius.online/images/cid.large.png")
             .setColor(0x7D3C98)
             .setTitle(`The Worlds of ${ message.guild.name }`)
-            .setDescription(`A new world has been created in this discord server:\n\n**${ worldname }**`)
+            .setDescription(`A new world has been created in this discord server, kupo!\n\n**${ worldname }**`)
             .setFooter("http://ffrpg3bot.gaius.online 🐙🇵🇭");
-        message.channel.send({embed});
+        msg.edit({embed});
     }
 }
