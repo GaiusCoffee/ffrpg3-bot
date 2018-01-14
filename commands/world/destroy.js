@@ -1,4 +1,3 @@
-const Discord = require("discord.js");
 exports.subcommands = ["d","destroy"];
 exports.run = async (client, message, args, level) => {
     // Parameters
