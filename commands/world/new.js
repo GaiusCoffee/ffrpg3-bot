@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-exports.subcommands = ["new"];
+exports.subcommands = ["n","new"];
 exports.run = async (client, message, args, level) => {
     // Parameters
 	let guildId = message.guild.id;
