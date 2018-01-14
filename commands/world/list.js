@@ -1,18 +1,12 @@
-const Enmap = require("enmap");
-const EnmapLevel = require("enmap-level");
 const Discord = require("discord.js");
 exports.subcommands = ["ls","list"];
 exports.run = async (client, message, args, level) => {
     // Parameters
-    let worldList = "";
-    if (!client.db.hasOwnProperty("worlds_" + message.guild.id)) {
-        client.db["worlds_" + message.guild.id] = 
-            new Enmap({provider: new EnmapLevel({name: "worlds_" + message.guild.id})});
-        await client.db["worlds_" + message.guild.id].defer;
-    }
+	let guildId = message.guild.id,
+        worldList = "";
     // Process
-    await client.db["worlds_" + message.guild.id].forEach((value, key) => {
-        worldList += `>> **${ key }** by ${ value }\n`;
+    await client.db[guildId].get("worlds").value().forEach((element,index) => {
+        worldList += `>> **${ element.worldname }** by ${ element.worldbuilder }\n`;
     });
     if (worldList === "") {
         worldList = "None yet! Ask a Worldbuilder to make one, kupo!";

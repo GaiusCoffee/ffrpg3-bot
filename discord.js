@@ -3,8 +3,8 @@ module.exports = class discord {
       	const Discord = require("discord.js");
 		const { promisify } = require("util");
 		const readdir = promisify(require("fs").readdir);
-		const Enmap = require("enmap");
-		const EnmapLevel = require("enmap-level");
+		const db = require("lowdb");
+		const FileAsync = require("lowdb/adapters/FileAsync");
 		const client = new Discord.Client();
 		// Setup Client Config
 		client.config = {
@@ -102,23 +102,28 @@ module.exports = class discord {
 		};
 		client.logger = require("./util/Logger");
 		require("./modules/functions.js")(client);
-		client.commands = new Enmap();
-		client.aliases = new Enmap();
-		client.settings = new Enmap({provider: new EnmapLevel({name: "settings"})});
-		client.db = {};
 		const init = async () => {
+			client.db = {};
+			client.settings = await db(new FileAsync("settings.json"));
+			await client.settings.defaults({ 
+				guilds:[], 
+				commands:[], 
+				aliases:[] 
+			}).write();
+			await client.settings.set("commands", []).write();
+			await client.settings.set("aliases", []).write();
 			const cmdFiles = await readdir("./commands/");
 			client.logger.log(`Loading a total of ${cmdFiles.length} commands.`);
-			cmdFiles.forEach(f => {
+			await cmdFiles.forEach(async f => {
 			  	if (!f.endsWith(".js")) return;
-			  	const response = client.loadCommand(f);
+			  	const response = await client.loadCommand(f);
 			  	if (response) console.log(response);
 			});
 			const evtFiles = await readdir("./events/");
 			client.logger.log(`Loading a total of ${evtFiles.length} events.`);
-			evtFiles.forEach(file => {
+			evtFiles.forEach(async file => {
 			  	const eventName = file.split(".")[0];
-			  	const event = require(`./events/${file}`);
+			  	const event = await require(`./events/${file}`);
 			  	client.on(eventName, event.bind(null, client));
 			  	delete require.cache[require.resolve(`./events/${file}`)];
 			});

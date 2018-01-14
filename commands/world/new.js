@@ -1,14 +1,8 @@
-const Enmap = require("enmap");
-const EnmapLevel = require("enmap-level");
 const Discord = require("discord.js");
 exports.subcommands = ["new"];
 exports.run = async (client, message, args, level) => {
     // Parameters
-    if (!client.db.hasOwnProperty("worlds_" + message.guild.id)) {
-        client.db["worlds_" + message.guild.id] = 
-            new Enmap({provider: new EnmapLevel({name: "worlds_" + message.guild.id})});
-        await client.db["worlds_" + message.guild.id].defer;
-    }
+	let guildId = message.guild.id;
     // Validate
     if (args.length < 2) {
         message.channel.send(
@@ -18,15 +12,17 @@ exports.run = async (client, message, args, level) => {
         message.channel.send(
             "🛑🛑 **ERROR** Kupopo!? **ERROR** 🛑🛑\n" + 
             "Worldnames cannot contain spaces!");
-    } else if (await client.db["worlds_" + message.guild.id].some(
-            (value, key) => { return key.toLowerCase() === args[1].toLowerCase(); })) {
+    } else if (await client.db[guildId].get("worlds").find({ worldname:args[1] }).value()) {
         message.channel.send(
             "🛑🛑 **ERROR** Kupopo!? **ERROR** 🛑🛑\n" + 
             "Worldname already exists!");
     } else {
         // Process
         let worldname = args[1];
-        await client.db["worlds_" + message.guild.id].set(worldname, message.author.username);
+        await client.db[guildId].get("worlds").push({ 
+            "worldname":worldname, 
+            "worldbuilder":message.author.username 
+        }).write();
         const msg = await message.channel.send("Please wait; Building world, kupo..");
         // Respond
         const embed = new Discord.RichEmbed()
