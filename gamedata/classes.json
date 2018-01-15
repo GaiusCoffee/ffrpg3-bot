@@ -1,0 +1,96 @@
+{
+    "all":[
+        {
+            "name":"Archer",
+            "job":"Warrior",
+            "attrBonus":{
+                "str":15,
+                "vit":10,
+                "agi":15,
+                "spd":10,
+                "mag":5,
+                "spr":5
+            },
+            "hpDie":"d10",
+            "mpDie":"n/a",
+            "weapons":["Boomerangs","Bows","Crossbows","Rifles"],
+            "armor":["Armwear", "Hats", "Suits", "Shields"],
+            "accBonus":30,
+            "skillPoints":240,
+            "skillAptitudes":"Wilderness",
+            "expertiseSkill":"n/a",
+            "expertiseAttr":"n/a",
+            "abilitySets":["Snipe"],
+            "reference":"pdf pg.64"
+        },
+        {
+            "name":"Bard",
+            "job":"Expert",
+            "attrBonus":{
+                "str":7,
+                "vit":7,
+                "agi":11,
+                "spd":11,
+                "mag":12,
+                "spr":12
+            },
+            "hpDie":"d8",
+            "mpDie":"n/a",
+            "weapons":["Bows","Knives","Instruments"],
+            "armor":["Armwear", "Hats", "Suits", "Robes"],
+            "accBonus":20,
+            "skillPoints":260,
+            "skillAptitudes":"Artistic",
+            "expertiseSkill":"Singing",
+            "expertiseAttr":"spr",
+            "abilitySets":["Bardsong"],
+            "reference":"pdf pg.80"
+        },
+        {
+            "name":"Black Caller",
+            "job":"Mage",
+            "attrBonus":{
+                "str":5,
+                "vit":5,
+                "agi":10,
+                "spd":10,
+                "mag":15,
+                "spr":15
+            },
+            "hpDie":"d6",
+            "mpDie":"d10",
+            "weapons":["Bows","Flails", "Knives","Rods", "Staves"],
+            "armor":["Armwear", "Hats", "Robes"],
+            "accBonus":10,
+            "skillPoints":280,
+            "skillAptitudes":"Scholastic",
+            "expertiseSkill":"n/a",
+            "expertiseAttr":"n/a",
+            "abilitySets":["Black Magic", "Evocation Magic"],
+            "reference":"pdf pg.104"
+        },
+        {
+            "name":"Dark Knight",
+            "job":"Adept",
+            "attrBonus":{
+                "str":12,
+                "vit":10,
+                "agi":9,
+                "spd":8,
+                "mag":9,
+                "spr":12
+            },
+            "hpDie":"d10",
+            "mpDie":"d6",
+            "weapons":["Axes", "Greatswords","Knives","Light Swords", "Polearms", "Swords"],
+            "armor":["Gauntlets", "Helmets", "Mail", "Robes", "Shields"],
+            "accBonus":30,
+            "skillPoints":240,
+            "skillAptitudes":"Weapon",
+            "expertiseSkill":"n/a",
+            "expertiseAttr":"n/a",
+            "abilitySets":["Fellblade"],
+            "reference":"pdf pg.113"
+        }
+    ]
+}

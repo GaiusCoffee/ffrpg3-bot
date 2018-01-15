@@ -104,6 +104,13 @@ module.exports = class discord {
 		require("./modules/functions.js")(client);
 		const init = async () => {
 			client.db = {};
+			client.gamedata = {};
+			client.gamedata.races = await db(new FileAsync("./gamedata/races.json"));
+			await client.gamedata.races.defaults({"all":[]});
+			client.gamedata.classes = await db(new FileAsync("./gamedata/classes.json"));
+			await client.gamedata.classes.defaults({"all":[]});
+			client.gamedata.classes = await db(new FileAsync("./gamedata/items.json"));
+			await client.gamedata.items.defaults({"all":[]});
 			client.settings = await db(new FileAsync("settings.json"));
 			await client.settings.defaults({ 
 				guilds:[], 

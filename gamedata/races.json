@@ -1,0 +1,28 @@
+{
+    "all":[
+        { 
+            "race":"human",
+            "attrMax": {
+                "str":10,
+                "vit":10,
+                "agi":10,
+                "spd":10,
+                "mag":10,
+                "spr":10
+            },
+            "reference":"pdf pg.45"
+        },
+        { 
+            "race":"moogle",
+            "attrMax": {
+                "str":8,
+                "vit":6,
+                "agi":11,
+                "spd":12,
+                "mag":11,
+                "spr":12
+            },
+            "reference":"pdf pg.52"
+        }
+    ]
+}
