@@ -11,7 +11,8 @@ exports.run = async (client, message, args, level, worldname) => {
             configElement = element;
         }
     });
-    if (!configValue) {
+    // Respond
+    if (!configElement) {
         message.channel.send(
 `= ${ worldname } = World Configuration =
 
@@ -27,6 +28,4 @@ Value Default: ${ configElement.default }
 Description  : ${ configElement.description }`
             ,{code: "asciidoc"});
     }
-    // Respond
-    message.channel.send(``,{code: "asciidoc"});
 }
