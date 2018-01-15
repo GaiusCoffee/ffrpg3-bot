@@ -10,8 +10,6 @@ exports.run = async (client, message, args, level, worldname) => {
 		require("./config/get").run(client, message, args, level, worldname);
 	} else if (require("./config/set").subcommands.includes(args[0].toLowerCase())) {
 		require("./config/set").run(client, message, args, level, worldname);
-	} else if (require("./config/info").subcommands.includes(args[0].toLowerCase())) {
-		require("./config/info").run(client, message, args, level, worldname);
 	} else {
 		message.channel.send(
 			"🛑🛑 **ERROR** Kupopo!? **ERROR** 🛑🛑\n" + 

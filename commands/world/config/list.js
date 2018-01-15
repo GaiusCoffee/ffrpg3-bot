@@ -12,8 +12,10 @@ exports.run = async (client, message, args, level, worldname) => {
         configList = "Wait.. what? No configuration found? Something went horribly wrong, kupo.. Try again?";
     }
     // Respond
-    message.channel.send(`= ${ worldname } World Configuration =
+    message.channel.send(
+`= ${ worldname } = World Configuration =
 
 ${ configList }
-use '/mog world ${ worldname } config info <key>' for more info.`,{code: "asciidoc"});
+use '/mog world ${ worldname } config get <key>' for more info.`
+        ,{code: "asciidoc"});
 }
