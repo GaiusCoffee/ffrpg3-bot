@@ -3,7 +3,7 @@ exports.subcommands = ["l","ls","list"];
 exports.run = async (client, message, args, level, worldname) => {
     // Parameters
 	let guildId = message.guild.id,
-        raceList = "";
+        raceList = [];
     // Process
     // Get builtin
 
@@ -13,7 +13,7 @@ exports.run = async (client, message, args, level, worldname) => {
 
     // Build raceList
     
-    if (raceList === "") {
+    if (raceList.length === 0) {
         raceList = "Apparently, this world has no sentient races, kupo!";
     }
     // Respond
