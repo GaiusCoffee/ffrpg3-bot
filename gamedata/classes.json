@@ -1,32 +1,32 @@
 {
     "all":[
         {
-            "name":"Archer",
+            "name":"Monk",
             "job":"Warrior",
-            "attrBonus":{
+            "attrMax":{
                 "str":15,
-                "vit":10,
-                "agi":15,
-                "spd":10,
-                "mag":5,
+                "vit":15,
+                "agi":7,
+                "spd":8,
+                "mag":10,
                 "spr":5
             },
-            "hpDie":"d10",
+            "hpDie":"d12",
             "mpDie":"n/a",
-            "weapons":["Boomerangs","Bows","Crossbows","Rifles"],
-            "armor":["Armwear", "Hats", "Suits", "Shields"],
+            "weapons":["Claws","Flails","Gloves","Staves"],
+            "armor":["Armwear", "Hats", "Suits"],
             "accBonus":30,
             "skillPoints":240,
-            "skillAptitudes":"Wilderness",
+            "skillAptitudes":"Weapon",
             "expertiseSkill":"n/a",
             "expertiseAttr":"n/a",
-            "abilitySets":["Snipe"],
-            "reference":"pdf pg.64"
+            "abilitySets":["Martial Arts"],
+            "reference":"pdf pg.73"
         },
         {
             "name":"Bard",
             "job":"Expert",
-            "attrBonus":{
+            "attrMax":{
                 "str":7,
                 "vit":7,
                 "agi":11,
@@ -47,50 +47,50 @@
             "reference":"pdf pg.80"
         },
         {
-            "name":"Black Caller",
+            "name":"Red Mage",
             "job":"Mage",
-            "attrBonus":{
-                "str":5,
-                "vit":5,
+            "attrMax":{
+                "str":10,
+                "vit":8,
                 "agi":10,
                 "spd":10,
-                "mag":15,
-                "spr":15
+                "mag":12,
+                "spr":10
             },
-            "hpDie":"d6",
-            "mpDie":"d10",
-            "weapons":["Bows","Flails", "Knives","Rods", "Staves"],
-            "armor":["Armwear", "Hats", "Robes"],
-            "accBonus":10,
-            "skillPoints":280,
+            "hpDie":"d8",
+            "mpDie":"d8",
+            "weapons":["Bows","Flails", "Knives", "Light Swords", "Rods", "Staves", "Swords"],
+            "armor":["Armwear", "Gauntlets", "Hats", "Helmets", "Mail", "Robes", "Shields"],
+            "accBonus":20,
+            "skillPoints":260,
             "skillAptitudes":"Scholastic",
             "expertiseSkill":"n/a",
             "expertiseAttr":"n/a",
-            "abilitySets":["Black Magic", "Evocation Magic"],
-            "reference":"pdf pg.104"
+            "abilitySets":["Red Magic"],
+            "reference":"pdf pg.106"
         },
         {
-            "name":"Dark Knight",
+            "name":"Ninja",
             "job":"Adept",
-            "attrBonus":{
-                "str":12,
-                "vit":10,
-                "agi":9,
-                "spd":8,
-                "mag":9,
-                "spr":12
+            "attrMax":{
+                "str":10,
+                "vit":8,
+                "agi":12,
+                "spd":12,
+                "mag":10,
+                "spr":8
             },
             "hpDie":"d10",
             "mpDie":"d6",
-            "weapons":["Axes", "Greatswords","Knives","Light Swords", "Polearms", "Swords"],
-            "armor":["Gauntlets", "Helmets", "Mail", "Robes", "Shields"],
+            "weapons":["Boomerangs", "Claws", "Flails", "Katanas", "Knives", "Ninja Blades"],
+            "armor":["Armwear", "Hats", "Suits"],
             "accBonus":30,
             "skillPoints":240,
-            "skillAptitudes":"Weapon",
+            "skillAptitudes":"Thievery",
             "expertiseSkill":"n/a",
             "expertiseAttr":"n/a",
-            "abilitySets":["Fellblade"],
-            "reference":"pdf pg.113"
+            "abilitySets":["Ninjutsu"],
+            "reference":"pdf pg.124"
         }
     ]
 }
