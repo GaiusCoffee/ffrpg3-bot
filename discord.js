@@ -22,7 +22,7 @@ module.exports = class discord {
 				"welcomeMessage": "Say hello to {{user}}, everyone! We all need a warm welcome sometimes :D",
 				"welcomeEnabled": "false"
 			},
-			permLevels: [
+			"permLevels": [
 				{ level: 0,
 				name: "Spectator", 
 				check: () => true
@@ -113,6 +113,8 @@ module.exports = class discord {
 			await client.gamedata.items.defaults({"all":[]});
 			client.gamedata.skills = await db(new FileAsync("./gamedata/skills.json"));
 			await client.gamedata.skills.defaults({"all":[]});
+			client.gamedata.progression = await db(new FileAsync("./gamedata/progression.json"));
+			await client.gamedata.progression.defaults({});
 			client.settings = await db(new FileAsync("settings.json"));
 			await client.settings.defaults({ 
 				guilds:[], 

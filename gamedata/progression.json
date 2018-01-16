@@ -1,0 +1,76 @@
+{
+    "Martial Arts":[
+        {
+            "level":1,
+            "gain":[ "Brawler", "Punch Rush" ]
+        },{
+            "level":8,
+            "gain":[ "Meteor Strike" ]
+        },{
+            "level":15,
+            "gain":[ "Earth Slash" ]
+        }
+    ],
+    "Bardsong":[
+        {
+            "level":1,
+            "gain":[ "Hide", "Elegy", "Logical Etude", "Mambo", "Water Rondo" ]
+        },{
+            "level":10,
+            "gain":[ "Esoteric Melody", "Lullaby", "Minnie", "Foe Requiem" ]
+        }
+        
+    ],
+    "Red Magic":[
+        {
+            "level":1,
+            "gain":[ "Intuitive Magic (Red Mage)" ],
+            "choose":{
+                "qty":3,
+                "from":[ "Aero", "Blind", "Blizzard", "Cure", "Fire", "Poison", "Poisona", "Scan", "Sleep", "Thunder"]
+            }
+        },{
+            "level":3,
+            "choose":{
+                "qty":1,
+                "from":[ "Aero", "Blind", "Blizzard", "Cure", "Fire", "Poison", "Poisona", "Scan", "Sleep", "Thunder"]
+            }
+        },{
+            "level":6,
+            "choose":{
+                "qty":1,
+                "from":[ "Aero", "Blind", "Blizzard", "Cure", "Fire", "Poison", "Poisona", "Scan", "Sleep", "Thunder"]
+            }
+        },{
+            "level":9,
+            "choose":{
+                "qty":1,
+                "from":[ "Aero", "Blind", "Blizzard", "Cure", "Fire", "Poison", "Poisona", "Scan", "Sleep", "Thunder"]
+            }
+        },{
+            "level":11,
+            "choose":{
+                "qty":1,
+                "from":[ "Berserk", "Blink", "Element Spikes", "Float", "Lock", "Rasp", "Slow", "Stona", "Water"]
+            }
+        },{
+            "level":13,
+            "choose":{
+                "qty":1,
+                "from":[ "Berserk", "Blink", "Element Spikes", "Float", "Lock", "Rasp", "Slow", "Stona", "Water"]
+            }
+        }
+    ],
+    "Ninjutsu":[
+        {
+            "level":1,
+            "gain":[ "Throw", "Dual Wield", "Intuitive Magic (Ninja)" ]
+        },{
+            "level":8,
+            "gain":[ "Utsusemi" ]
+        },{
+            "level":15,
+            "gain":[ "Katon" ]
+        }
+    ]
+}
