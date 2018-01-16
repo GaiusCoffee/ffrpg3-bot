@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 exports.subcommands = ["s","set"];
 exports.run = async (client, message, args, level, worldname) => {
     // Parameters
-    if (args.length <= 3) {
+    if (args.length < 3) {
 		message.channel.send(
 			"🛑🛑 **ERROR** Kupopo!? **ERROR** 🛑🛑\n" + 
 			"Too few parameters for world.config.set command.");
@@ -11,14 +11,16 @@ exports.run = async (client, message, args, level, worldname) => {
     let guildId = message.guild.id,
         configKey = args[1],
         configValue = args[2],
-        configOldValue = "";
+        configOldValue = "",
+        configElement;
     // Process
     await client.db[guildId].get("worlds").find({ worldname:worldname }).value().config.forEach((element,index) => {
         if (configKey === element.key) {
             configOldValue = element.value;
         }
     });
-    await config.db[guildId].get("worlds").find({ worldname:worldname, key:configKey }).assign({ value:configValue }).write();
+    // ToDo: Make this work
+    await client.db[guildId].get("worlds").find({ worldname:worldname }).find({ key:configKey }).assign({ value:configValue }).write();
     // Respond
     if (configOldValue === "") {
         message.channel.send(
