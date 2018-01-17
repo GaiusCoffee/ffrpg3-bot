@@ -6,10 +6,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
 	// Load DB
 	if (!client.db.hasOwnProperty(guildId)) {
 		client.db[guildId] = await db(new FileAsync(`./data/${ guildId }.json`));
-		await client.db[guildId].defaults({
-			characters:[],
-			worlds:[]
-		}).write();
+		await client.db[guildId].defaults({"worlds":[]}).write();
 	}
 	// Process
 	if (args.length === 0) {
@@ -32,10 +29,10 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
 			message.channel.send(
 				"🛑🛑 **ERROR** Kupopo!? **ERROR** 🛑🛑\n" + 
 				"Unknown command! Sorry, but I didn't understand that...");
-			} else if (require("./world/config").subcommands.includes(args[0].toLowerCase())) {
-				require("./world/config").run(client, message, args, level, worldname);
-			} else if (require("./world/race").subcommands.includes(args[0].toLowerCase())) {
-				require("./world/race").run(client, message, args, level, worldname);
+		} else if (require("./world/config").subcommands.includes(args[0].toLowerCase())) {
+			require("./world/config").run(client, message, args, level, worldname);
+		} else if (require("./world/race").subcommands.includes(args[0].toLowerCase())) {
+			require("./world/race").run(client, message, args, level, worldname);
 		} else {
 			message.channel.send(
 				"🛑🛑 **ERROR** Kupopo!? **ERROR** 🛑🛑\n" + 
