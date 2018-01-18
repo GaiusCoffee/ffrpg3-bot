@@ -10,7 +10,7 @@ exports.run = async (client, message, args, level, worldname) => {
     });
     // Get custom
     // Remove disabled
-    // Build raceList
+    // Build classList
     if (classList.length === 0) {
         classes = "Apparently, this world has no classes available except Freelancer, kupo!";
     } else {
