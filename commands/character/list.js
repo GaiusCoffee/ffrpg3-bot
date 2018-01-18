@@ -9,7 +9,7 @@ exports.run = async (client, message, args, level) => {
         characterList += `>> **${ element.name }**, a Lv ${ element.level } ${ element.class } [${ element.status }]\n`;
     });
     if (characterList === "") {
-        characterList = "None yet! Create one using '/mog character new <charactername>', kupo!";
+        characterList = "None yet! Create one using '/mog character new *charactername*', kupo!";
     }
     // Respond
     const embed = new Discord.RichEmbed()
