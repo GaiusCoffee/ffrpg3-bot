@@ -25,7 +25,7 @@ exports.run = async (client, message, args, level) => {
             race:"Human",
             mainClass:"Freelancer",
             mainJob:"Expert",
-            mainLevel:1,
+            mainLevel:0,
             subClass:"",
             subJob:"",
             subLevel:0,
@@ -59,7 +59,8 @@ exports.run = async (client, message, args, level) => {
             mainAbilities:[],
             subAbilities:[],
             experiencePts:0,
-            statusEffects:[]
+            statusEffects:[],
+            status:"Invalid"
         }).write();
         // Respond
         const embed = new Discord.RichEmbed()
@@ -70,7 +71,7 @@ exports.run = async (client, message, args, level) => {
             .setDescription(
 `A new character has been created, kupo!
 
-**${ charactername }**, a Lv1 Human Freelancer!
+**${ charactername }**, a Lv0 Human Freelancer!
 
 To further build this character, use the '/mog character ${ charactername } build' command!`)
             .setFooter("http://ffrpg3bot.gaius.online 🐙🇵🇭");
