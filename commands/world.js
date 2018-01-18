@@ -35,6 +35,8 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
 			require("./world/race").run(client, message, args, level, worldname);
 		} else if (require("./world/class").subcommands.includes(args[0].toLowerCase())) {
 			require("./world/class").run(client, message, args, level, worldname);
+		} else if (require("./world/item").subcommands.includes(args[0].toLowerCase())) {
+			require("./world/item").run(client, message, args, level, worldname);
 		} else {
 			message.channel.send(
 				"🛑🛑 **ERROR** Kupopo!? **ERROR** 🛑🛑\n" + 
