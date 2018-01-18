@@ -64,7 +64,7 @@ ${ classes }`
 
 ${ classes }
 
-Use the '/mog *worldname* class list *classname*' command to view specific details regarding a class.`
+Use the '/mog world *worldname* class list *classname*' command to view specific details regarding a class.`
             ,{code: "asciidoc"});
 
     }
