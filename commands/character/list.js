@@ -6,7 +6,7 @@ exports.run = async (client, message, args, level) => {
         characterList = "";
     // Process
     await client.db[authorId].get("characters").value().forEach((element,index) => {
-        characterList += `>> **${ element.name }**, a Lv ${ element.level } ${ element.class } [${ element.status }]\n`;
+        characterList += `>> **${ element.name }**, a Lv${ element.mainLevel } ${ element.mainClass } [${ element.status }]\n`;
     });
     if (characterList === "") {
         characterList = "None yet! Create one using '/mog character new *charactername*', kupo!";

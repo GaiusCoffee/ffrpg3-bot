@@ -1,11 +1,11 @@
-exports.subcommands = ["c","config"];
+exports.subcommands = ["b","build"];
 exports.run = async (client, message, args, level, charactername) => {
 	// Process
 	args.shift(); // Remove subcommand from args
 	if (args.length === 0) {
-		require("./build/list").run(client, message, args, level, worldname);
+		require("./build/list").run(client, message, args, level, charactername);
 	} else if (require("./build/list").subcommands.includes(args[0].toLowerCase())) {
-		require("./build/list").run(client, message, args, level, worldname);
+		require("./build/list").run(client, message, args, level, charactername);
 	} else {
 		message.channel.send(
 			"🛑🛑 **ERROR** Kupopo!? **ERROR** 🛑🛑\n" + 

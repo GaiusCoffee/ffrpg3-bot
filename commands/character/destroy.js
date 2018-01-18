@@ -18,7 +18,7 @@ exports.run = async (client, message, args, level) => {
         do {
             let response = await client.awaitReply(message, `Are you sure you want to destroy ${ character.name }, a Lv ${ character.level } ${ character.class }? Y/N **This CANNOT be undone.**`);
             if (["y","Y","yes","YES"].includes(response)) {
-                await client.db[guildId].get("characters").remove({ name:args[1] }).write();
+                await client.db[authorId].get("characters").remove({ name:args[1] }).write();
                 message.reply(`Kupo! ${ args[1] } successfully destroyed.`);
                 confirm = true;
             } else if (["n","N","no","NO"].includes(response)) {

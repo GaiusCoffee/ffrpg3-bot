@@ -19,7 +19,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
 		require("./character/destroy").run(client, message, args, level);
 	} else {
 		let charactername = "";
-		await client.db[guildId].get("characters").value().forEach((element,index) => {
+		await client.db[authorId].get("characters").value().forEach((element,index) => {
 			if (element.name === args[0]) {
 				charactername = args[0];
 			}
