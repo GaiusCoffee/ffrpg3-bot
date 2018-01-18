@@ -10,22 +10,22 @@ exports.run = async (client, message, args, level, charactername) => {
 • **/mog character ${charactername} build setClass *class***
   This command will set your character's class! You can use the command '/mog world *worldname* class' on your Discord Server to find out which classes are available in your storyteller's world! Note that this command will clear all of your learned abilities, set your character's class level and experience point back to zero.
 • **/mog character ${charactername} build setAttributes *str* *vit* *agi* *spd* *mag* *spr***
-  This command will set your character's attributes! For a level 1 character, make sure that the total amount will equal exactly to 40, kupo!
-• **/mog character ${charactername} build takeBasicTraitsTest***
-  This command will start the Traits Test, to find out how your character will earn Key Points.
-• **/mog character ${charactername} build addAdvTrait *advTrait***
-  This command will add an Advanced Trait to your character! These are extra ways to earn and spend Key Points, but make sure your Storyteller knows and approves of this beforehand! Use the command '/mog world *worldname* advTraits' on your Discord Server to find out which advanced traits are available in your world.
-• **/mog character ${charactername} build removeAdvTrait *advTrait***
-  This command will remove an Advanced Trait from your character!
-• **/mog character ${charactername} build addAdvantage *advantage***
-  This command will add an Advantage to your character! You can use the command '/mog world *worldname* advantage' on your Discord Server to find out which advantages are available in your storyteller's world!
-• **/mog character ${charactername} build removeAdvantage *advantage***
-  This command will remove an Advantage from your character!
-• **/mog character ${charactername} build addDisadvantage *disadvantage***
-  This command will add a Disvantage to your character! You can use the command '/mog world *worldname* disadvantage' on your Discord Server to find out which disadvantages are available in your storyteller's world!
-• **/mog character ${charactername} build removeDisadvantage *disadvantage***
-  This command will remove a Disadvantage from your character!
-• **/mog character ${charactername} build addItem *item***
+  This command will set your character's attributes! For a level 1 character, make sure that the total amount will equal exactly to 40, kupo!` +
+//• **/mog character ${charactername} build takeBasicTraitsTest***
+//  This command will start the Traits Test, to find out how your character will earn Key Points.
+//• **/mog character ${charactername} build addAdvTrait *advTrait***
+//  This command will add an Advanced Trait to your character! These are extra ways to earn and spend Key Points, but make sure your Storyteller knows and approves of this beforehand! Use the command '/mog world *worldname* advTraits' on your Discord Server to find out which advanced traits are available in your world.
+//• **/mog character ${charactername} build removeAdvTrait *advTrait***
+//  This command will remove an Advanced Trait from your character!
+//• **/mog character ${charactername} build addAdvantage *advantage***
+//  This command will add an Advantage to your character! You can use the command '/mog world *worldname* advantage' on your Discord Server to find out which advantages are available in your storyteller's world!
+//• **/mog character ${charactername} build removeAdvantage *advantage***
+//  This command will remove an Advantage from your character!
+//• **/mog character ${charactername} build addDisadvantage *disadvantage***
+//  This command will add a Disvantage to your character! You can use the command '/mog world *worldname* disadvantage' on your Discord Server to find out which disadvantages are available in your storyteller's world!
+//• **/mog character ${charactername} build removeDisadvantage *disadvantage***
+//  This command will remove a Disadvantage from your character!
+`• **/mog character ${charactername} build addItem *item***
   This command will add an Item to your Character's Inventory! You can use the command '/mog world *worldname* item *type* *tier*' on your Discord Server to find out which items are available in your storyteller's world! Note that items w/o tiers cannot be listed this way!
 • **/mog character ${charactername} build removeItem *item***
   This command will remove an Item from your Character's Inventory!
