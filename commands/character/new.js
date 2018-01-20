@@ -60,7 +60,9 @@ exports.run = async (client, message, args, level) => {
             subAbilities:[],
             experiencePts:0,
             statusEffects:[],
-            status:"Invalid"
+            status:"Invalid",
+            hpRolls:[],
+            mpRolls:[]
         }).write();
         // Respond
         const embed = new Discord.RichEmbed()
