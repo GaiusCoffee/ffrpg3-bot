@@ -62,7 +62,6 @@ ${ items }`
             let filterTier = Number(args[1]);
             args.shift();args.shift();
             let filterType = args.join(" ");
-            client.logger.debug(filterType);
             // Get builtin
             await client.gamedata.items.get("all").filter({ type:filterType, tier:filterTier }).sortBy("avail").value().forEach((element, index) => {
                 itemList.push(element);
