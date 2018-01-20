@@ -17,7 +17,7 @@ exports.run = async (client, message, args, level) => {
         .setThumbnail("http://ffrpg3bot.gaius.online/images/cid.large.png")
         .setColor(0x7D3C98)
         .setTitle(`The Characters of ${ message.author.username }`)
-        .setDescription(`${ characterList }`)
+        .setDescription(`${ characterList }\n\nIf any of your characters are marked with an Invalid status, use the '/mog character check *charactername* *worldname*' command to verify if the status is correct.`)
         .setFooter("http://ffrpg3bot.gaius.online 🐙🇵🇭");
     message.channel.send({embed});
 }

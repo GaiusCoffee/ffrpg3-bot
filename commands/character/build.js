@@ -6,6 +6,8 @@ exports.run = async (client, message, args, level, charactername) => {
 		require("./build/list").run(client, message, args, level, charactername);
 	} else if (require("./build/list").subcommands.includes(args[0].toLowerCase())) {
 		require("./build/list").run(client, message, args, level, charactername);
+	} else if (require("./build/setRace").subcommands.includes(args[0].toLowerCase())) {
+		require("./build/setRace").run(client, message, args, level, charactername);
 	} else {
 		message.channel.send(
 			"🛑🛑 **ERROR** Kupopo!? **ERROR** 🛑🛑\n" + 
