@@ -44,7 +44,6 @@ exports.run = async (client, message, args, level, charactername) => {
     let oldRace = await client.db[authorId].get("characters").find({ name:charactername }).value().race,
         newRace = args[1];
     await client.db[authorId].get("characters").find({ name:charactername }).assign({ "race":newRace }).write();
-    client.logger.debug(newRace);
     message.author.send(
 `Character Builder: **${charactername}**
 
