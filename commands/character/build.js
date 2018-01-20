@@ -12,6 +12,10 @@ exports.run = async (client, message, args, level, charactername) => {
 		require("./build/setClass").run(client, message, args, level, charactername);
 	} else if (require("./build/setAttributes").subcommands.includes(args[0].toLowerCase())) {
 		require("./build/setAttributes").run(client, message, args, level, charactername);
+	} else if (require("./build/addItem").subcommands.includes(args[0].toLowerCase())) {
+		require("./build/addItem").run(client, message, args, level, charactername);
+	} else if (require("./build/removeItem").subcommands.includes(args[0].toLowerCase())) {
+		require("./build/removeItem").run(client, message, args, level, charactername);
 	} else {
 		message.channel.send(
 			"🛑🛑 **ERROR** Kupopo!? **ERROR** 🛑🛑\n" + 
