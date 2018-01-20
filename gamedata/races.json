@@ -1,7 +1,7 @@
 {
     "all":[
         { 
-            "race":"human",
+            "race":"Human",
             "attrMax": {
                 "str":10,
                 "vit":10,
@@ -13,7 +13,7 @@
             "reference":"pdf pg.45"
         },
         { 
-            "race":"moogle",
+            "race":"Moogle",
             "attrMax": {
                 "str":8,
                 "vit":6,
