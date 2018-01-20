@@ -22,7 +22,7 @@ exports.run = async (client, message, args, level) => {
         const msg = await message.channel.send("Please wait; Creating your character, kupo..");
         await client.db[authorId].get("characters").push({
             name:charactername,
-            race:"human",
+            race:"Human",
             mainClass:"Freelancer",
             mainJob:"Expert",
             mainLevel:0,
