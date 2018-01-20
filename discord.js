@@ -6,6 +6,7 @@ module.exports = class discord {
 		const db = require("lowdb");
 		const FileAsync = require("lowdb/adapters/FileAsync");
 		const client = new Discord.Client();
+		const Chance = require("chance");
 		// Setup Client Config
 		client.config = {
 			"ownerID": owner,
@@ -103,6 +104,7 @@ module.exports = class discord {
 		client.logger = require("./util/Logger");
 		require("./modules/functions.js")(client);
 		const init = async () => {
+			client.chance = new Chance();
 			client.db = {};
 			client.gamedata = {};
 			client.gamedata.races = await db(new FileAsync("./gamedata/races.json"));
