@@ -31,10 +31,10 @@ message.author.send(`Continued...
   This command will add an Item to your Character's Inventory! You can use the command '/mog world *worldname* item *type* *tier*' on your Discord Server to find out which items are available in your storyteller's world! Note that items w/o tiers cannot be listed this way!
 • **/mog character ${charactername} build removeItem *item***
   This command will remove an Item from your Character's Inventory!
-• **/mog character ${charactername} build equipItem *item***
-  This command will equip your character with an item from its inventory.
-• **/mog character ${charactername} build unequipItem *item***
-  This command will unequip an item from your character.
+• **/mog character ${charactername} build equipItem *slot* *item***
+  This command will equip your character with an item from its inventory into one of the following slots: weapon, shield, head, hands, body or accessory.
+• **/mog character ${charactername} build unequipItem *slot***
+  This command will unequip an item from your character on one of the following slots: weapon, shield, head, hands, body or accessory.
 • **/mog character ${charactername} build addSkill *skill* *qty***
   This command will use 'qty' skill points from your Class and acquire or improve your Character's Skill Rating! This automatically applies Skill Aptitudes, double cost skills and Lore/Language only skills. For a level 1 character, make sure that no skill exceeds skill rating 50.
 • **/mog character ${charactername} build removeSkill *skill* *qty***

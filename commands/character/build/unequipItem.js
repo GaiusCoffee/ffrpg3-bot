@@ -1,4 +1,4 @@
-exports.subcommands = ["additem", "addItem"];
+exports.subcommands = ["unequipitem", "unequipItem"];
 exports.run = async (client, message, args, level, charactername) => {
     // Parameters
     let authorId = message.author.id;
@@ -17,36 +17,33 @@ exports.run = async (client, message, args, level, charactername) => {
         return;
     }
     // Check if item exists
-    let itemName;
+    let itemName, itemId, slot;
     if (args.length < 2) {
         message.author.send(
             "🛑🛑 **ERROR** Kupopo!? **ERROR** 🛑🛑\n" + 
-            `Unable to find the item your entered.`);
+            `Unable to find the slot you entered.`);
         return;
     } else {
         args.shift();
-        itemName = args.join(" ");
-        if (!await client.gamedata.items.get("all").find({name:itemName}).value()) {
+        slot = args[0];
+        if (!['weapon','shield','body','head','hands','accessory'].includes(slot.toLowerCase())) {
             message.author.send(
                 "🛑🛑 **ERROR** Kupopo!? **ERROR** 🛑🛑\n" + 
-                `Unable to find the item your entered.`);
+                `Unable to find the slot you entered. Valid slots are: weapon, shield, head, hands, body or accessory`);
             return;
         }
     }
     // Process
-    await client.db[authorId].get("characters").find({name:charactername}).get("equipInventory").push({
-        id:client.chance.guid(),
-        name:itemName,
-        slot:"inventory"
-    }).write();
-    let items = "Items               | Cost      | Avail | Abilities\n" + 
-                "---------------------------------------------------\n";
-    await client.db[authorId].get("characters").find({name:charactername}).value().equipInventory.forEach(async element => {
+    await client.db[authorId].get("characters").find({name:charactername}).get("equipInventory").find({slot:slot}).assign({slot:"inventory"}).write();
+    let items = "Items               | Cost      | Eq. | Abilities\n" + 
+                "-------------------------------------------------\n";
+    let character = await client.db[authorId].get("characters").find({name:charactername}).value();
+    await character.equipInventory.forEach(async element => {
         let item = await client.gamedata.items.get("all").find({name:element.name}).value();
         items += 
             item.name.padEnd(20) + "| " + 
             item.cost.toString().padStart(5) + " gil | " +
-            item.avail.toString().padStart(4) + "% | ";
+            element.slot.substring(0,3) + " | ";
         if (item.abilities) {
             items += item.abilities.join(",");
         }
@@ -55,7 +52,7 @@ exports.run = async (client, message, args, level, charactername) => {
     message.author.send(
 `Character Builder: **${charactername}**
 
-Item '${itemName}' added to inventory. Current character's inventory:
+Item unequipped from ${slot} slot back to inventory. Current character's inventory:
 
 ${items}`
         ,{code: "asciidoc"});
