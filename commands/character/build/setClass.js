@@ -42,7 +42,10 @@ exports.run = async (client, message, args, level, charactername) => {
         "mainLevel":0,
         "subClass":"",
         "subJob":"",
-        "subLevel":0 
+        "subLevel":0,
+        "skillPtsLoreLang":0,
+        "skillPtsGenereal":0,
+        "skills":[]
     }).write();
     message.author.send(
 `Character Builder: **${charactername}**

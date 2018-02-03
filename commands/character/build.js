@@ -20,6 +20,10 @@ exports.run = async (client, message, args, level, charactername) => {
 		require("./build/equipItem").run(client, message, args, level, charactername);
 	} else if (require("./build/unequipItem").subcommands.includes(args[0].toLowerCase())) {
 		require("./build/unequipItem").run(client, message, args, level, charactername);
+	} else if (require("./build/addSkill").subcommands.includes(args[0].toLowerCase())) {
+		require("./build/addSkill").run(client, message, args, level, charactername);
+	} else if (require("./build/removeSkill").subcommands.includes(args[0].toLowerCase())) {
+		require("./build/removeSkill").run(client, message, args, level, charactername);
 	} else {
 		message.channel.send(
 			"🛑🛑 **ERROR** Kupopo!? **ERROR** 🛑🛑\n" + 

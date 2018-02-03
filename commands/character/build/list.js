@@ -35,9 +35,9 @@ message.author.send(`Continued...
   This command will equip your character with an item from its inventory into one of the following slots: weapon, shield, head, hands, body or accessory.
 • **/mog character ${charactername} build unequipItem *slot***
   This command will unequip an item from your character on one of the following slots: weapon, shield, head, hands, body or accessory.
-• **/mog character ${charactername} build addSkill *skill* *qty***
+• **/mog character ${charactername} build addSkill *qty* *skill***
   This command will use 'qty' skill points from your Class and acquire or improve your Character's Skill Rating! This automatically applies Skill Aptitudes, double cost skills and Lore/Language only skills. For a level 1 character, make sure that no skill exceeds skill rating 50.
-• **/mog character ${charactername} build removeSkill *skill* *qty***
+• **/mog character ${charactername} build removeSkill *qty* *skill***
   This command will refund 'qty' skill points from your class and turn it back into skill points
 • **/mog character ${charactername} build setExperience *exp***
   This command sets your character's experience points.

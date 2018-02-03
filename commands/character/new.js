@@ -49,7 +49,7 @@ exports.run = async (client, message, args, level) => {
             currentMP:0,
             skills:[],
             skillPtsGeneral:0,
-            skillPtsLoreLang:160,
+            skillPtsLoreLang:0,
             mainAbilities:[],
             subAbilities:[],
             experiencePts:0,
