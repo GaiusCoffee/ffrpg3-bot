@@ -117,6 +117,10 @@ module.exports = class discord {
 			await client.gamedata.skills.defaults({"all":[]});
 			client.gamedata.progression = await db(new FileAsync("./gamedata/progression.json"));
 			await client.gamedata.progression.defaults({});
+			client.gamedata.abilities = await db(new FileAsync("./gamedata/abilities.json"));
+			await client.gamedata.abilities.defaults({});
+			client.ffrpg3 = {};
+			client.ffrpg3.character = new (require("./ffrpg3/character"))(client);
 			client.settings = await db(new FileAsync("settings.json"));
 			await client.settings.defaults({ 
 				guilds:[], 

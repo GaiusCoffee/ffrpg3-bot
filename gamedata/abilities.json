@@ -1,0 +1,308 @@
+{
+    "all":[
+        {
+            "name":"Brawler",
+            "abilitySet":["Martial Arts"],
+            "type":"Support",
+            "chargeTime":0,
+            "spellCategories":[],
+            "mpCost":0
+        },
+        {
+            "name":"Punch Rush",
+            "abilitySet":["Martial Arts"],
+            "type":"Slow",
+            "chargeTime":2,
+            "spellCategories":[],
+            "mpCost":0
+        },
+        {
+            "name":"Meteor Strike",
+            "abilitySet":["Martial Arts"],
+            "type":"Slow",
+            "chargeTime":4,
+            "spellCategories":[],
+            "mpCost":0
+        },
+        {
+            "name":"Earth Slash",
+            "abilitySet":["Martial Arts"],
+            "type":"Slow",
+            "chargeTime":6,
+            "spellCategories":[],
+            "mpCost":0
+        },
+        {
+            "name":"Hide",
+            "abilitySet":["Bardsong"],
+            "type":"Fast",
+            "chargeTime":0,
+            "spellCategories":[],
+            "mpCost":0
+        },
+        {
+            "name":"Elegy",
+            "abilitySet":["Bardsong"],
+            "type":"Magic",
+            "chargeTime":2,
+            "spellCategories":[],
+            "mpCost":0
+        },
+        {
+            "name":"Logical Etude",
+            "abilitySet":["Bardsong"],
+            "type":"Magic",
+            "chargeTime":2,
+            "spellCategories":[],
+            "mpCost":0
+        },
+        {
+            "name":"Mambo",
+            "abilitySet":["Bardsong"],
+            "type":"Magic",
+            "chargeTime":2,
+            "spellCategories":[],
+            "mpCost":0
+        },
+        {
+            "name":"Water Rondo",
+            "abilitySet":["Bardsong"],
+            "type":"Magic",
+            "chargeTime":2,
+            "spellCategories":[],
+            "mpCost":0
+        },
+        {
+            "name":"Esoteric Melody",
+            "abilitySet":["Bardsong"],
+            "type":"Magic",
+            "chargeTime":4,
+            "spellCategories":[],
+            "mpCost":0
+        },
+        {
+            "name":"Lullaby",
+            "abilitySet":["Bardsong"],
+            "type":"Magic",
+            "chargeTime":4,
+            "spellCategories":[],
+            "mpCost":0
+        },
+        {
+            "name":"Minnie",
+            "abilitySet":["Bardsong"],
+            "type":"Magic",
+            "chargeTime":4,
+            "spellCategories":[],
+            "mpCost":0
+        },
+        {
+            "name":"Foe Requiem",
+            "abilitySet":["Bardsong"],
+            "type":"Magic",
+            "chargeTime":4,
+            "spellCategories":[],
+            "mpCost":0
+        },
+        {
+            "name":"Intuitive Magic",
+            "abilitySet":["Red Magic"],
+            "type":"Magic",
+            "chargeTime":0,
+            "spellCategories":[],
+            "mpCost":0
+        },
+        {
+            "name":"Aero",
+            "abilitySet":["Red Magic", "White Magic"],
+            "type":"Magic",
+            "chargeTime":0,
+            "spellCategories":["Elemental (Wind)"],
+            "mpCost":7
+        },
+        {
+            "name":"Blind",
+            "abilitySet":["Red Magic", "Black Magic"],
+            "type":"Magic",
+            "chargeTime":0,
+            "spellCategories":["Status (Seal)"],
+            "mpCost":5
+        },
+        {
+            "name":"Blizzard",
+            "abilitySet":["Red Magic", "Black Magic"],
+            "type":"Magic",
+            "chargeTime":0,
+            "spellCategories":["Elemental (Ice)"],
+            "mpCost":7
+        },
+        {
+            "name":"Cure",
+            "abilitySet":["Red Magic", "White Magic"],
+            "type":"Magic",
+            "chargeTime":0,
+            "spellCategories":["Recovery"],
+            "mpCost":5
+        },
+        {
+            "name":"Fire",
+            "abilitySet":["Red Magic", "Black Magic"],
+            "type":"Magic",
+            "chargeTime":0,
+            "spellCategories":["Elemental (Fire)"],
+            "mpCost":7
+        },
+        {
+            "name":"Poison",
+            "abilitySet":["Red Magic", "Black Magic"],
+            "type":"Magic",
+            "chargeTime":0,
+            "spellCategories":["Elemental (Bio)", "Status (Toxin)"],
+            "mpCost":7
+        },
+        {
+            "name":"Poisona",
+            "abilitySet":["Red Magic", "White Magic"],
+            "type":"Magic",
+            "chargeTime":0,
+            "spellCategories":["Recovery"],
+            "mpCost":3
+        },
+        {
+            "name":"Scan",
+            "abilitySet":["Red Magic", "White Magic"],
+            "type":"Magic",
+            "chargeTime":0,
+            "spellCategories":["Support"],
+            "mpCost":3
+        },
+        {
+            "name":"Sleep",
+            "abilitySet":["Red Magic", "Black Magic"],
+            "type":"Magic",
+            "chargeTime":0,
+            "spellCategories":["Status (Seal)"],
+            "mpCost":5
+        },
+        {
+            "name":"Thunder",
+            "abilitySet":["Red Magic", "Black Magic"],
+            "type":"Magic",
+            "chargeTime":0,
+            "spellCategories":["Elemental (Lightning)"],
+            "mpCost":7
+        },
+        {
+            "name":"Berserk",
+            "abilitySet":["Red Magic", "White Magic"],
+            "type":"Magic",
+            "chargeTime":0,
+            "spellCategories":["Status (Mystify)"],
+            "mpCost":12
+        },
+        {
+            "name":"Blink",
+            "abilitySet":["Red Magic", "White Magic"],
+            "type":"Magic",
+            "chargeTime":0,
+            "spellCategories":["Status (Strengthen)"],
+            "mpCost":10
+        },
+        {
+            "name":"Element Spikes",
+            "abilitySet":["Red Magic", "Black Magic"],
+            "type":"Magic",
+            "chargeTime":0,
+            "spellCategories":["Status (Strengthen)"],
+            "mpCost":16
+        },
+        {
+            "name":"Float",
+            "abilitySet":["Red Magic", "Time Magic"],
+            "type":"Magic",
+            "chargeTime":0,
+            "spellCategories":["Status (Strengthen)"],
+            "mpCost":15
+        },
+        {
+            "name":"Lock",
+            "abilitySet":["Red Magic", "Black Magic"],
+            "type":"Magic",
+            "chargeTime":0,
+            "spellCategories":["Status (Weak)"],
+            "mpCost":10
+        },
+        {
+            "name":"Rasp",
+            "abilitySet":["Red Magic", "Black Magic"],
+            "type":"Magic",
+            "chargeTime":0,
+            "spellCategories":["Arcane (Magical)"],
+            "mpCost":15
+        },
+        {
+            "name":"Slow",
+            "abilitySet":["Red Magic", "Time Magic"],
+            "type":"Magic",
+            "chargeTime":0,
+            "spellCategories":["Status (Time)"],
+            "mpCost":12
+        },
+        {
+            "name":"Stona",
+            "abilitySet":["Red Magic", "White Magic"],
+            "type":"Magic",
+            "chargeTime":0,
+            "spellCategories":["Recovery"],
+            "mpCost":10
+        },
+        {
+            "name":"Water",
+            "abilitySet":["Red Magic", "Black Magic"],
+            "type":"Magic",
+            "chargeTime":0,
+            "spellCategories":["Elemental (Water)"],
+            "mpCost":18
+        },
+        {
+            "name":"Throw",
+            "abilitySet":["Ninjutsu"],
+            "type":"Support",
+            "chargeTime":0,
+            "spellCategories":[],
+            "mpCost":0
+        },
+        {
+            "name":"Dual Wield",
+            "abilitySet":["Ninjutsu"],
+            "type":"Support",
+            "chargeTime":0,
+            "spellCategories":[],
+            "mpCost":0
+        },
+        {
+            "name":"Intuitive Magic (Ninja)",
+            "abilitySet":["Ninjutsu"],
+            "type":"Magic",
+            "chargeTime":0,
+            "spellCategories":[],
+            "mpCost":0
+        },
+        {
+            "name":"Utsusemi",
+            "abilitySet":["Ninjutsu"],
+            "type":"Slow",
+            "chargeTime":4,
+            "spellCategories":[],
+            "mpCost":0
+        },
+        {
+            "name":"Katon",
+            "abilitySet":["Ninjutsu"],
+            "type":"Magic",
+            "chargeTime":0,
+            "spellCategories":[],
+            "mpCost":28
+        }
+    ]
+}

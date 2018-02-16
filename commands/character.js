@@ -31,6 +31,8 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
 				"Unknown command! Sorry, but I didn't understand that...");
         } else if (require("./character/build").subcommands.includes(args[0].toLowerCase())) {
             require("./character/build").run(client, message, args, level, charactername);
+        } else if (require("./character/show").subcommands.includes(args[0].toLowerCase())) {
+            require("./character/show").run(client, message, args, level, charactername);
 		} else {
 			message.channel.send(
 				"🛑🛑 **ERROR** Kupopo!? **ERROR** 🛑🛑\n" + 
